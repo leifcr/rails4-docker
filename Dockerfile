@@ -12,9 +12,9 @@ RUN apt-get update -qq && apt-get install -y \
 
 # For staging and production env, duck-cli must be installed to be able to download refile assets
 # If encoding errors occur, adjust locale.
-ENV APP_HOME /app \
-    LANG C.UTF-8 \
-    PHANTOMJS_VERSION 2.1.1
+ENV APP_HOME /app
+ENV LANG C.UTF-8
+ENV PHANTOMJS_VERSION 2.1.1
 
 RUN set -x  \
  && mkdir /tmp/phantomjs \
