@@ -123,7 +123,8 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl_rails', require: false # , group: [:test]
-  gem 'leifcr-capybara-screenshot'
+  # gem 'leifcr-capybara-screenshot'
+  gem 'capybara-screenshot'
   gem 'shoulda-matchers'
   gem 'timecop'
 
@@ -132,7 +133,11 @@ group :test do
 
   # js drivers for capybara
   # Use phantomjs through poltergeist
-  gem 'poltergeist'
+  # gem 'poltergeist'
+
+  gem 'capybara-selenium'
+  gem 'chromedriver-helper'
+
   # Alternative: change to https://github.com/elgalu/docker-selenium
   # For using real chrome/ff browsers through selenium
 

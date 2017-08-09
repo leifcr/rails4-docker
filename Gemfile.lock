@@ -54,9 +54,11 @@ GEM
     annotate (2.7.2)
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 13.0)
+    archive-zip (0.7.0)
+      io-like (~> 0.3.0)
     arel (6.0.4)
     ast (2.3.0)
-    autoprefixer-rails (7.1.2)
+    autoprefixer-rails (7.1.2.4)
       execjs
     awesome_nested_set (3.1.3)
       activerecord (>= 4.0.0, < 5.2)
@@ -65,9 +67,9 @@ GEM
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
     bcrypt (3.1.11)
-    better_errors (2.1.1)
+    better_errors (2.3.0)
       coderay (>= 1.0.0)
-      erubis (>= 2.6.6)
+      erubi (>= 1.0.0)
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -98,17 +100,24 @@ GEM
     capistrano-rails (1.3.0)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
-    capybara (2.14.4)
+    capybara (2.15.1)
       addressable
-      mime-types (>= 1.16)
+      mini_mime (>= 0.1.3)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-selenium (0.0.6)
+      capybara
+      selenium-webdriver
+    childprocess (0.7.1)
+      ffi (~> 1.0, >= 1.0.11)
+    chromedriver-helper (1.1.0)
+      archive-zip (~> 0.7.0)
+      nokogiri (~> 1.6)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     clipboard-rails (1.7.1)
-    cliver (0.3.2)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
     codemirror-rails (5.16.0)
@@ -123,12 +132,12 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     connection_pool (2.2.1)
-    countries (2.0.8)
-      i18n_data (~> 0.7.0)
-      money (~> 6.7)
+    countries (2.1.2)
+      i18n_data (~> 0.8.0)
+      money (~> 6.9)
       sixarm_ruby_unaccent (~> 1.1)
       unicode_utils (~> 1.4)
-    country_select (3.0.0)
+    country_select (3.1.0)
       countries (~> 2.0)
       sort_alphabetical (~> 1.0)
     css_parser (1.5.0)
@@ -177,9 +186,10 @@ GEM
       http_parser.rb (~> 0.6.0)
     enumerize (2.1.2)
       activesupport (>= 3.2)
+    erubi (1.6.1)
     erubis (2.7.0)
-    eventmachine (1.2.3)
-    excon (0.57.1)
+    eventmachine (1.2.5)
+    excon (0.58.0)
     execjs (2.7.0)
     facets (3.1.0)
     factory_girl (4.8.0)
@@ -187,16 +197,16 @@ GEM
     factory_girl_rails (4.8.0)
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
-    faker (1.7.3)
+    faker (1.8.4)
       i18n (~> 0.5)
-    faraday (0.12.1)
+    faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.11.0.1)
+    faraday_middleware (0.12.2)
       faraday (>= 0.7.4, < 1.0)
     ffi (1.9.18)
-    fog-core (1.44.3)
+    fog-core (1.45.0)
       builder
-      excon (~> 0.49)
+      excon (~> 0.58)
       formatador (~> 0.2)
     fog-json (1.0.2)
       fog-core (~> 1.0)
@@ -214,7 +224,7 @@ GEM
     formatador (0.2.5)
     friendly_id (5.2.1)
       activerecord (>= 4.0.0)
-    gli (2.16.0)
+    gli (2.16.1)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     gon (6.1.0)
@@ -249,7 +259,7 @@ GEM
       haml (>= 4.0.6, < 6.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
-    hashie (3.5.5)
+    hashie (3.5.6)
     highline (1.7.8)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
@@ -260,7 +270,7 @@ GEM
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     http_parser.rb (0.6.0)
-    i18n (0.8.4)
+    i18n (0.8.6)
     i18n-tasks (0.9.15)
       activesupport (>= 4.0.2)
       ast (>= 2.1.0)
@@ -271,12 +281,13 @@ GEM
       parser (>= 2.2.3.0)
       rainbow (~> 2.2)
       terminal-table (>= 1.5.1)
-    i18n_data (0.7.0)
+    i18n_data (0.8.0)
     image_processing (0.4.4)
     interactor (3.1.0)
     interactor-rails (2.1.1)
       interactor (~> 3.0)
       rails (>= 4.2, < 5.2)
+    io-like (0.3.0)
     ipaddress (0.8.3)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -307,11 +318,6 @@ GEM
       activerecord
       kaminari-core (= 1.0.1)
     kaminari-core (1.0.1)
-    launchy (2.4.3)
-      addressable (~> 2.3)
-    leifcr-capybara-screenshot (1.0.16)
-      capybara (>= 1.0, < 3)
-      launchy
     leifcr-refile-fog (0.2.0)
       fog-core (~> 1.42)
       fog-json
@@ -336,8 +342,9 @@ GEM
     mime-types (2.99.3)
     mimemagic (0.3.0)
     mini_magick (4.8.0)
+    mini_mime (0.1.3)
     mini_portile2 (2.2.0)
-    minitest (5.10.2)
+    minitest (5.10.3)
     momentjs-rails (2.17.1)
       railties (>= 3.1)
     money (6.9.0)
@@ -345,7 +352,7 @@ GEM
     multi_json (1.12.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
-    mysql2 (0.4.7)
+    mysql2 (0.4.8)
     nenv (0.3.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -370,7 +377,7 @@ GEM
     omniauth-github (1.3.0)
       omniauth (~> 1.5)
       omniauth-oauth2 (>= 1.4.0, < 2.0)
-    omniauth-google-oauth2 (0.5.0)
+    omniauth-google-oauth2 (0.5.2)
       jwt (~> 1.5)
       multi_json (~> 1.3)
       omniauth (>= 1.1.1)
@@ -382,7 +389,7 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
-    paper_trail (7.0.3)
+    paper_trail (7.1.0)
       activerecord (>= 4.0, < 5.2)
       request_store (~> 1.1)
     paperclip (4.3.6)
@@ -393,10 +400,6 @@ GEM
       mimemagic (= 0.3.0)
     parser (2.4.0.0)
       ast (~> 2.2)
-    poltergeist (1.15.0)
-      capybara (~> 2.1)
-      cliver (~> 0.3.1)
-      websocket-driver (>= 0.2.0)
     premailer (1.10.4)
       addressable
       css_parser (>= 1.4.10)
@@ -440,7 +443,7 @@ GEM
     rails-assets-jquery.lazyload (1.9.7)
     rails-assets-js-cookie (2.1.4)
     rails-assets-loadcss (1.3.1)
-    rails-assets-pnotify (3.2.0)
+    rails-assets-pnotify (3.2.1)
       rails-assets-jquery (>= 1.6)
     rails-assets-select2 (4.0.3)
     rails-assets-slick-carousel (1.6.0)
@@ -517,20 +520,28 @@ GEM
     ruby_gntp (0.3.4)
     ruby_parser (3.9.0)
       sexp_processor (~> 4.1)
-    sass (3.4.24)
+    rubyzip (1.2.1)
+    sass (3.5.1)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
       sass (~> 3.1)
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    secure_headers (3.6.6)
-      useragent (>= 0.15.0)
+    secure_headers (3.6.7)
+      useragent
+    selenium-webdriver (3.4.4)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.0)
     sentry-raven (2.5.3)
       faraday (>= 0.7.6, < 1.0)
     sexp_processor (4.9.0)
     shellany (0.0.1)
-    shoulda-matchers (3.1.1)
+    shoulda-matchers (3.1.2)
       activesupport (>= 4.0.0)
     simple_form (3.4.0)
       actionpack (> 4, < 5.1)
@@ -542,7 +553,7 @@ GEM
     sixarm_ruby_unaccent (1.1.2)
     skylight (1.3.1)
       activesupport (>= 3.0.0)
-    slack-ruby-client (0.8.1)
+    slack-ruby-client (0.9.0)
       activesupport
       faraday (>= 0.9)
       faraday_middleware
@@ -572,7 +583,7 @@ GEM
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     statesman (3.0.0)
-    stripe (3.0.0)
+    stripe (3.2.0)
       faraday (~> 0.9)
     sweet-alert-confirm (0.4.1)
     terminal-table (1.8.0)
@@ -580,7 +591,7 @@ GEM
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
-    thin (1.7.1)
+    thin (1.7.2)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
       rack (>= 1, < 3)
@@ -603,7 +614,7 @@ GEM
     unicode_utils (1.4.0)
     useragent (0.16.8)
     uuidtools (2.1.5)
-    valid_email2 (1.2.18)
+    valid_email2 (2.0.0)
       activemodel (>= 3.2)
       mail (~> 2.5)
     warden (1.2.7)
@@ -640,6 +651,8 @@ DEPENDENCIES
   capistrano-pumaio
   capistrano-rails
   capybara
+  capybara-selenium
+  chromedriver-helper
   clipboard-rails
   codemirror-rails
   connection_pool
@@ -679,7 +692,6 @@ DEPENDENCIES
   jquery-ui-rails
   jquery.fileupload-rails
   kaminari
-  leifcr-capybara-screenshot
   leifcr-refile-fog
   leifcr-refile-mini_magick
   magnific-popup-rails
@@ -694,7 +706,6 @@ DEPENDENCIES
   omniauth-linkedin-oauth2
   paper_trail
   paperclip
-  poltergeist
   premailer-rails
   pry-rails
   pry-toys
@@ -750,4 +761,4 @@ DEPENDENCIES
   wysiwyg-rails (= 2.5.1)
 
 BUNDLED WITH
-   1.15.1
+   1.15.3
