@@ -107,6 +107,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-screenshot (1.0.17)
+      capybara (>= 1.0, < 3)
+      launchy
     capybara-selenium (0.0.6)
       capybara
       selenium-webdriver
@@ -318,6 +321,8 @@ GEM
       activerecord
       kaminari-core (= 1.0.1)
     kaminari-core (1.0.1)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     leifcr-refile-fog (0.2.0)
       fog-core (~> 1.42)
       fog-json
@@ -651,6 +656,7 @@ DEPENDENCIES
   capistrano-pumaio
   capistrano-rails
   capybara
+  capybara-screenshot
   capybara-selenium
   chromedriver-helper
   clipboard-rails
