@@ -9,7 +9,7 @@ ENV LANG C.UTF-8
 
 RUN  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
      echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list && \
-     apt-get update -qq && \
+     apt-get update -q && \
      apt-get install -y \
      build-essential \
      libmysqlclient-dev \
@@ -17,8 +17,9 @@ RUN  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-ke
      libxslt1-dev \
      mysql-client \
      wget \
-     nodejs \
-     chrome-stable
+     nodejs && \
+     apt-get install -y google-chrome-stable --no-install-recommends && \
+     rm -rf /var/lib/apt/lists/*
 
 RUN set -x  \
  && mkdir $APP_HOME \
