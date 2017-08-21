@@ -24,11 +24,13 @@ RUN  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-ke
      apt-get install -y google-chrome-stable --no-install-recommends && \
      rm -rf /var/lib/apt/lists/*
 
-RUN set -x  \
- && mkdir $APP_HOME \
- && groupadd -g 1000 rails \
- && useradd -s /bin/bash -m -d /home/rails -g rails rails \
- && chown rails:rails /app
+RUN set -x && \
+    mkdir $APP_HOME && \
+    mkdir /ssh-agent && \
+    groupadd -g 1000 rails && \
+    useradd -s /bin/bash -m -d /home/rails -g rails rails && \
+    chown rails:rails /app && \
+    chown rails:rails /ssh-agent
 
 # Copy docker entry point
 COPY docker-entrypoint.sh /usr/local/bin/

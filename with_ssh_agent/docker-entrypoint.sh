@@ -1,4 +1,16 @@
 #!/bin/bash
+set +e
+
+# Check if env is set
+if [ ! -z ${SSH_AUTH_SOCK+x} ]; then
+  # echo 'Loading ssh-agent if not already loaded'
+  ssh-add -l &>/dev/null
+  if [ "$?" == 2 ]; then
+    echo "starting ssh agent"
+    eval "ssh-agent -a $SSH_AUTH_SOCK" >/dev/null
+  fi
+fi
+
 set -e
 case "$1" in
         annotate|cap|capify|cucumber|foodcritic|guard|irb|jekyll|kitchen|knife)
