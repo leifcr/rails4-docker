@@ -117,19 +117,19 @@ group :development, :test do
   # gem 'rspec-collection_matchers'
   gem 'faker'
   gem 'thin'
+  gem 'factory_girl_rails' #, require: false # , group: [:test]
 end
 
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'factory_girl_rails', require: false # , group: [:test]
   # gem 'leifcr-capybara-screenshot'
   gem 'capybara-screenshot'
   gem 'shoulda-matchers'
   gem 'timecop'
 
   # Retry if phantomjs just blows up...
-  gem 'rspec-retry'
+  # gem 'rspec-retry'
 
   # js drivers for capybara
   # Use phantomjs through poltergeist
