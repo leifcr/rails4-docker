@@ -27,7 +27,7 @@ gem 'mysql2'
 
 gem 'jbuilder', '~> 2.0'
 
-gem 'haml', '~> 4.0.0'
+gem 'haml' # , '~> 4.0.0'
 gem 'haml-rails'
 
 # gem 'bcrypt', '~> 3.1.7'
@@ -95,7 +95,7 @@ gem 'delayed_job'
 gem 'delayed_job_active_record'
 
 # Forms
-gem 'simple_form', '~> 3.4.0'
+gem 'simple_form', '~> 3.4'
 gem 'country_select' # rubocop:disable Bundler/OrderedGems - countries must be after country_select
 gem 'countries' # rubocop:disable Bundler/OrderedGems
 

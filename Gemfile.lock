@@ -254,7 +254,8 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    haml (4.0.7)
+    haml (5.0.2)
+      temple (>= 0.8.0)
       tilt
     haml-rails (1.0.0)
       actionpack (>= 4.0.1)
@@ -546,9 +547,9 @@ GEM
     shellany (0.0.1)
     shoulda-matchers (3.1.2)
       activesupport (>= 4.0.0)
-    simple_form (3.4.0)
-      actionpack (> 4, < 5.1)
-      activemodel (> 4, < 5.1)
+    simple_form (3.5.0)
+      actionpack (> 4, < 5.2)
+      activemodel (> 4, < 5.2)
     sinatra (1.4.8)
       rack (~> 1.5)
       rack-protection (~> 1.4)
@@ -589,6 +590,7 @@ GEM
     stripe (3.3.1)
       faraday (~> 0.9)
     sweet-alert-confirm (0.4.1)
+    temple (0.8.0)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     therubyracer (0.12.3)
@@ -601,7 +603,7 @@ GEM
     thor (0.19.1)
     thread (0.2.2)
     thread_safe (0.3.6)
-    tilt (2.0.7)
+    tilt (2.0.8)
     timecop (0.9.1)
     truncate_html (0.9.3)
     turbolinks (2.5.3)
@@ -685,7 +687,7 @@ DEPENDENCIES
   gon
   guard-livereload
   guard-rspec
-  haml (~> 4.0.0)
+  haml
   haml-rails
   hashie
   i18n-tasks
@@ -741,7 +743,7 @@ DEPENDENCIES
   secure_headers
   sentry-raven
   shoulda-matchers
-  simple_form (~> 3.4.0)
+  simple_form (~> 3.4)
   skylight
   slack-ruby-client
   spring
