@@ -27,7 +27,7 @@ gem 'mysql2'
 
 gem 'jbuilder', '~> 2.0'
 
-gem 'haml' # , '~> 4.0.0'
+gem 'haml', '~> 4.0.0' # Until 5.0.3 has been released with https://github.com/haml/haml/pull/952 included
 gem 'haml-rails'
 
 # gem 'bcrypt', '~> 3.1.7'

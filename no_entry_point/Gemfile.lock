@@ -254,8 +254,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    haml (5.0.2)
-      temple (>= 0.8.0)
+    haml (4.0.7)
       tilt
     haml-rails (1.0.0)
       actionpack (>= 4.0.1)
@@ -590,7 +589,6 @@ GEM
     stripe (3.3.1)
       faraday (~> 0.9)
     sweet-alert-confirm (0.4.1)
-    temple (0.8.0)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     therubyracer (0.12.3)
@@ -687,7 +685,7 @@ DEPENDENCIES
   gon
   guard-livereload
   guard-rspec
-  haml
+  haml (~> 4.0.0)
   haml-rails
   hashie
   i18n-tasks
