@@ -50,11 +50,13 @@ gem 'refile', require: 'refile/rails'
 gem 'leifcr-refile-fog'
 gem 'leifcr-refile-mini_magick', require: 'refile/mini_magick'
 
-gem 'paperclip'
+# gem 'paperclip'
 # gem 'paperclip-optimizer', '~> 2.0.0'
 # gem 'image_optim', '~> 0.20'
 # gem 'image_optim_pack'
-gem 'delayed_paperclip'
+# gem 'delayed_paperclip'
+
+gem 'carrierwave'
 
 gem 'interactor-rails', '~> 2.0'
 
