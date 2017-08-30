@@ -7,6 +7,10 @@ if [ ! -z ${SSH_AUTH_SOCK+x} ]; then
   ssh-add -l &>/dev/null
   if [ "$?" == 2 ]; then
     echo "starting ssh agent"
+    # Check if the pidfile exists and the agent is unconnectable
+    if [ -e "$SSH_AUTH_SOCK" ]; then
+      rm -f $SSH_AUTH_SOCK
+    fi
     eval "ssh-agent -a $SSH_AUTH_SOCK" >/dev/null
   fi
 fi
