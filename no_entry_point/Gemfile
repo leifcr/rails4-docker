@@ -189,7 +189,9 @@ gem 'codemirror-rails'
 gem 'paper_trail'
 
 # Prettier alerts
-# TODO: Change to this to include confirm method for rails.confirm ujs
+# TODO:
+# Change to this to include confirm method for rails.confirm ujs
+# Change to use https://github.com/alencarandre/sweet-alert2-rails-confirm
 gem 'sweet-alert-confirm'
 
 # Better lightboxes
@@ -287,6 +289,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-pnotify'
   gem 'rails-assets-select2'
   gem 'rails-assets-slick-carousel'
+  # Update to either limonte/sweetalert2 or newer sweetalert. (Depending in sweetalert-confirm)
   gem 'rails-assets-sweetalert', '~> 1.1.3'
   gem 'rails-assets-typeahead.js'
   gem 'rails-assets-underscore'
