@@ -80,8 +80,8 @@ gem 'secure_headers'
 gem 'uglifier', '>= 1.3.0'
 # uglifier requirement
 gem 'execjs'
-# gem 'mini_racer'
-gem 'therubyracer' # , group: [:development] # execjs/uglifier requirement
+gem 'mini_racer'
+# gem 'therubyracer' # , group: [:development] # execjs/uglifier requirement
 
 # Error Tracking
 gem 'sentry-raven'
@@ -113,6 +113,9 @@ gem 'omniauth-linkedin-oauth2'
 
 # Authorization
 gem 'pundit'
+
+# For simple search, ransack can be used
+# gem 'ransack'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.6' # , group: [:development, :test]
@@ -229,7 +232,7 @@ group :development do
 
   # Use Capistrano for deployment
   gem 'capistrano', require: false
-  gem 'capistrano-db-tasks', require: false, git: 'https://github.com/leifcr/capistrano-db-tasks.git', tag: 'v0.4.1'
+  gem 'capistrano-db-tasks', require: false # , git: 'https://github.com/leifcr/capistrano-db-tasks.git', tag: 'v0.4.1'
   gem 'capistrano-delayed_job', require: false
   gem 'capistrano-monit_runit', require: false
   gem 'capistrano-pumaio', require: false
