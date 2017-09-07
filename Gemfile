@@ -287,7 +287,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-pnotify'
   gem 'rails-assets-select2'
   gem 'rails-assets-slick-carousel'
-  gem 'rails-assets-sweetalert'
+  gem 'rails-assets-sweetalert', '~> 1.1.3'
   gem 'rails-assets-typeahead.js'
   gem 'rails-assets-underscore'
   # gem 'rails-assets-modernizr'
