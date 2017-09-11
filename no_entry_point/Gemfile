@@ -117,6 +117,9 @@ gem 'pundit'
 # For simple search, ransack can be used
 # gem 'ransack'
 
+# For sitemaps
+gem 'sitemap_generator'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.6' # , group: [:development, :test]
   # gem 'rspec-collection_matchers'
