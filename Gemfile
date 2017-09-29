@@ -7,8 +7,8 @@ gem 'sprockets-es6', require: 'sprockets/es6'
 
 gem 'responders' # See https://github.com/plataformatec/responders
 
-gem 'turbolinks', '~> 2.5'
-gem 'jquery-turbolinks' # rubocop:disable Bundler/OrderedGems jquery-turbolinks must be after turbolinks
+gem 'turbolinks'
+# gem 'jquery-turbolinks' # rubocop:disable Bundler/OrderedGems jquery-turbolinks must be after turbolinks
 
 gem 'rails-i18n'
 
@@ -89,9 +89,10 @@ gem 'sentry-raven'
 group :staging, :production do
   # Profiler
   gem 'skylight'
-  # Use puma as the web server in production
-  gem 'puma'
 end
+
+# Use puma as the web server
+gem 'puma'
 
 gem 'delayed_job'
 gem 'delayed_job_active_record'
@@ -111,6 +112,9 @@ gem 'omniauth-github'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-linkedin-oauth2'
 
+# For accessing google apis (YouTube etc)
+# gem 'google-api-ruby'
+
 # Authorization
 gem 'pundit'
 
@@ -124,8 +128,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.6' # , group: [:development, :test]
   # gem 'rspec-collection_matchers'
   gem 'faker'
-  gem 'thin'
-  gem 'factory_girl_rails' #, require: false # , group: [:test]
+  # gem 'thin'
+  gem 'factory_girl_rails' # , require: false # , group: [:test]
 end
 
 group :test do
@@ -247,6 +251,8 @@ group :development do
   # See https://github.com/charliesome/better_errors/issues/341
   gem 'better_errors'
   gem 'binding_of_caller'
+  # This gem fixes puma issue temporarly
+  gem 'debug-extras'
 
   gem 'quiet_assets'
 
@@ -285,6 +291,7 @@ end
 source 'https://rails-assets.org' do
   gem 'rails-assets-accounting.js'
   gem 'rails-assets-animate.css'
+  gem 'rails-assets-handlebars'
   gem 'rails-assets-jquery', '~> 2.2.4', require: false
   gem 'rails-assets-jquery.lazyload'
   gem 'rails-assets-js-cookie'
