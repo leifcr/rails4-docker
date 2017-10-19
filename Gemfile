@@ -291,6 +291,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-accounting.js'
   gem 'rails-assets-animate.css'
   gem 'rails-assets-core-typeahead'
+  gem 'rails-assets-datetimepicker'
   gem 'rails-assets-handlebars'
   gem 'rails-assets-jquery', '~> 2.2.4', require: false
   gem 'rails-assets-jquery.lazyload'
@@ -303,8 +304,6 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-sweetalert', '~> 1.1.3'
   gem 'rails-assets-underscore'
 
-  # Since bower.json isn't updated, the build cannot be used
-  # gem 'rails-assets-datetimepicker'
   # Alternative:
   # gem 'rails-assets-material-datetime-picker'
 
