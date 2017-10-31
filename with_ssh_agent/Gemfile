@@ -124,7 +124,7 @@ gem 'pundit'
 gem 'sitemap_generator'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.6' # , group: [:development, :test]
+  gem 'rspec-rails', '~> 3.7' # , group: [:development, :test]
   # gem 'rspec-collection_matchers'
   gem 'faker'
   # gem 'thin'
