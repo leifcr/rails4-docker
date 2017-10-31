@@ -128,7 +128,7 @@ group :development, :test do
   # gem 'rspec-collection_matchers'
   gem 'faker'
   # gem 'thin'
-  gem 'factory_girl_rails' # , require: false # , group: [:test]
+  gem 'factory_bot_rails' # , require: false # , group: [:test]
 end
 
 group :test do
