@@ -123,6 +123,10 @@ gem 'pundit'
 # For sitemaps
 gem 'sitemap_generator'
 
+gem 'inky-rb', require: 'inky'
+
+gem 'foundation_emails'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.7' # , group: [:development, :test]
   # gem 'rspec-collection_matchers'
