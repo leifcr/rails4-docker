@@ -670,7 +670,6 @@ DEPENDENCIES
   faker
   faraday
   fog-rackspace
-  foundation_emails
   friendly_id
   gon
   guard-livereload
