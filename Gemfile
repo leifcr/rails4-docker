@@ -139,13 +139,6 @@ group :test do
   gem 'shoulda-matchers'
   gem 'timecop'
 
-  # Retry if phantomjs just blows up...
-  # gem 'rspec-retry'
-
-  # js drivers for capybara
-  # Use phantomjs through poltergeist
-  # gem 'poltergeist'
-
   gem 'capybara-selenium'
   gem 'chromedriver-helper'
 
