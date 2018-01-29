@@ -15,6 +15,7 @@ RUN  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-ke
      libmysqlclient-dev \
      libxml2-dev \
      libxslt1-dev \
+     ghostscript \
      mysql-client \
      wget \
      nodejs && \
