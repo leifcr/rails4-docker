@@ -245,7 +245,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   # This gem fixes puma issue temporarly
-  gem 'debug-extras'
+  # gem 'debug-extras'
 
   gem 'quiet_assets'
 
